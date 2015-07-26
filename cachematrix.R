@@ -1,7 +1,7 @@
 ## These functions use the <<- operator to assign a value to a
 
-## Thus function creates a matrix and stores it as a list that contains a function to
-## 
+## This function takes a (square) matrix as input and stores it as a list that
+## can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
      Inv <- NULL
