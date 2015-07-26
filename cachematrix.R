@@ -1,7 +1,9 @@
-## These functions use the <<- operator to assign a value to a
+## This code uses the scoping rules in R to cache the inverse of a square, invertible
+## matrix. This method eliminates the need to recompute the inverse of a matrix in
+## certain calculations.
 
-## This function takes a (square) matrix as input and stores it as a list that
-## can cache its inverse
+## This function takes a (square) matrix and stores the matrix as a list that contains
+## a fucntion to set and retrieve the matrix and its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
      Inv <- NULL
@@ -18,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## This function calcultes the inverse of the matrix created above. It first checks to see
-## if the inverse has already been calculated. If the inverse already exisits, it returns the cached 
+## if the inverse has already been calculated. If the inverse already exist, it returns the cached 
 ## value of the inverse. If not, the inverse is calculated via the setinv function.
 
 cacheSolve <- function(x, ...) {
